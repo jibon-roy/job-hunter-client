@@ -1,0 +1,9 @@
+.active {
+    background-color: transparent !important;
+    color: #007efe !important;
+    font-weight: bold;
+}
+
+NavLink {
+    font-weight: 500 !important;
+}

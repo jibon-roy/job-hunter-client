@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
+    colors: {
+      'primary-blue': '#007efe',
+      'primary-dark-blue': '#034077',
+      'primary-dark': '#323232'
+    }
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }
