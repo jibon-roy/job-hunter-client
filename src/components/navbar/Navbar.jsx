@@ -8,10 +8,10 @@ const Navbar = () => {
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/all-jobs'>All Jobs</NavLink></li>
-        <li><NavLink to='/jobs'>Add Job</NavLink></li>
-        <li><NavLink to='/jobs'>My Posted Jobs</NavLink></li>
-        <li><NavLink to='/jobs'>My Bids</NavLink></li>
-        <li><NavLink to='/jobs'>Bid Requests</NavLink></li>
+        <li><NavLink to='/jobs/add'>Add Job</NavLink></li>
+        <li><NavLink to='/jobs/posted'>My Posted Jobs</NavLink></li>
+        <li><NavLink to='/jobs/bids'>My Bids</NavLink></li>
+        <li><NavLink to='/jobs/requests'>Bid Requests</NavLink></li>
         <li><NavLink to='/login'>Login</NavLink></li>
         <Link to='/register'><button className="btn bg-primary-blue hover:bg-primary-blue-hover text-base-100 normal-case">Register</button></Link>
     </>

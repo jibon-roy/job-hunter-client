@@ -5,6 +5,7 @@ import HomeLayout from "../layouts/homeLayout/HomeLayout";
 import LoginLayout from "../layouts/LoginLayout/LoginLayout";
 import RegisterLayout from "../layouts/RegisterLayout/RegisterLayout";
 import AllJobs from "../layouts/AllJobs/AllJobs";
+import JobDetails from "../layouts/jobDetails/jobDetails";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path: '/all-jobs',
                 element: <AllJobs></AllJobs>,
+            },
+            {
+                path: '/jobs/:id',
+                element: <JobDetails></JobDetails>,
             },
             {
                 path: '/login',
