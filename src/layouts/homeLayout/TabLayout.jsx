@@ -1,5 +1,6 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import JobContainer from '../../components/jobContainer/JobContainer';
 
 const TabLayout = () => {
     return (
@@ -18,7 +19,7 @@ const TabLayout = () => {
                 </TabList>
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
+                    <JobContainer></JobContainer>
                 </TabPanel>
                 <TabPanel>
                     <h2>Any content 2</h2>

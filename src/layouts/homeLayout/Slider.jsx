@@ -8,7 +8,6 @@ import logo from '/logo.png'
 const Slider = ({ slider }) => {
 
 
-
     return (
         <div>
             <div className="hero h-[80vh] lg:h-[65vh] " style={{ backgroundImage: `url(${slider?.backgroundImageURL})` }} >
