@@ -13,7 +13,9 @@ function App() {
       </Helmet>
       <div className='container mx-auto'>
         <Navbar></Navbar>
-        <Outlet></Outlet>
+        <div className='min-h-[65vh]'>
+          <Outlet></Outlet>
+        </div>
         <Footer></Footer>
       </div>
 
