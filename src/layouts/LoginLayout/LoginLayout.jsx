@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import google from '../../assets/google.png';
+import { Helmet } from "react-helmet-async";
 
 const LoginLayout = () => {
 
@@ -13,6 +14,9 @@ const LoginLayout = () => {
 
     return (
         <div>
+            <Helmet>
+                <title> Job Hunter | Login</title>
+            </Helmet>
             <form onSubmit={handleLoginSubmit} className="text-gray-600 min-h-[80vh] flex items-center body-font">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
                     <div className="lg:w-3/5 lg:ml-10 md:w-1/2 md:pr-16 lg:pr-0 pr-0">

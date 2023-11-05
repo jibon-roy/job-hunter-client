@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import google from '../../assets/google.png';
 import register from '../../assets/register.webp';
+import { Helmet } from "react-helmet-async";
 
 const RegisterLayout = () => {
     const handleLoginSubmit = (e) => {
@@ -15,6 +16,9 @@ const RegisterLayout = () => {
 
     return (
         <div>
+            <Helmet>
+                <title> Job Hunter | Register</title>
+            </Helmet>
             <form onSubmit={handleLoginSubmit} className="text-gray-600 min-h-[80vh] flex items-center body-font">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
                     <div className="lg:w-3/5 lg:ml-10 md:w-1/2 max-lg:text-center max-lg:mx-auto md:pr-16 lg:pr-0 md:-mt-40 pr-0">

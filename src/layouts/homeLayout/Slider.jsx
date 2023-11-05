@@ -11,7 +11,7 @@ const Slider = ({ slider }) => {
 
     return (
         <div>
-            <div className="hero h-[60vh] " style={{ backgroundImage: `url(${slider?.backgroundImageURL})` }} >
+            <div className="hero h-[80vh] lg:h-[65vh] " style={{ backgroundImage: `url(${slider?.backgroundImageURL})` }} >
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-2xl text-center">
@@ -29,7 +29,7 @@ const Slider = ({ slider }) => {
                             />
                         </h1>
                         <p className="mb-5 text-lg">{slider?.sliderText}</p>
-                        <PrimaryButton>Click Me</PrimaryButton>
+                        <PrimaryButton>Browse Jobs</PrimaryButton>
                     </div>
                 </div>
             </div>

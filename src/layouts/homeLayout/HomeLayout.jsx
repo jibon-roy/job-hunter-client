@@ -1,10 +1,16 @@
+import TabLayout from "./TabLayout";
 import Banner from "./banner";
 
 
 const HomeLayout = () => {
     return (
         <div>
-            <Banner></Banner>
+            <section>
+                <Banner></Banner>
+            </section>
+            <section>
+                <TabLayout></TabLayout>
+            </section>
         </div>
     );
 };
