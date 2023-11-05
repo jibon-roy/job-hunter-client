@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "heading": "Web Developer Job",
+    "sliderText": "Looking for a creative and talented web developer to join our team. Bring your design skills to the next level with us!",
+    "backgroundImageURL": "https://cdn.seeklearning.com.au/media/images/career-guide/module/web-designer-module.jpg",
+    "category": "Web Design Job"
+  },
+
+  {
+    "id": 2,
+    "heading": "Graphics Designer Job",
+    "sliderText": "Join our graphics design team and turn your creative ideas into stunning visual content. We're hiring now!",
+    "backgroundImageURL": "https://designaphy.com/blog/img/Types-of-Graphic-Design.jpg",
+    "category": "Graphics Designer Job"
+  },
+  {
+    "id": 3,
+    "heading": "Digital Marketing",
+    "sliderText": "Become a part of our digital marketing team and help businesses grow online. We're looking for digital marketing experts!",
+    "backgroundImageURL": "https://www.wordstream.com/wp-content/uploads/2022/03/ws-learn-digital-marketing-jobs-product-marketing-jobs.png",
+    "category": "Digital Marketing"
+  }
+]
