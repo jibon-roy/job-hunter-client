@@ -12,7 +12,7 @@ const Navbar = () => {
         <li><NavLink to='/jobs'>My Bids</NavLink></li>
         <li><NavLink to='/jobs'>Bid Requests</NavLink></li>
         <li><NavLink to='/login'>Login</NavLink></li>
-        <button className="btn bg-primary-blue hover:bg-primary-blue-hover text-base-100 normal-case">Register</button>
+        <Link to='/register'><button className="btn bg-primary-blue hover:bg-primary-blue-hover text-base-100 normal-case">Register</button></Link>
     </>
 
     return (

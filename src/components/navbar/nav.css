@@ -4,6 +4,15 @@
     font-weight: bold;
 }
 
-NavLink {
+li {
     font-weight: 500 !important;
+
+}
+
+li a:hover {
+    background-color: transparent !important;
+}
+
+li a:focus {
+    background-color: transparent !important;
 }

@@ -3,6 +3,7 @@ import App from "../App";
 import ErrorLayout from "../layouts/errorLayout/ErrorLayout";
 import HomeLayout from "../layouts/homeLayout/HomeLayout";
 import LoginLayout from "../layouts/LoginLayout/LoginLayout";
+import RegisterLayout from "../layouts/RegisterLayout/RegisterLayout";
 
 
 const router = createBrowserRouter([
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
                 element: <LoginLayout></LoginLayout>,
             },
             {
-                path: '/',
-                element: <HomeLayout></HomeLayout>,
+                path: '/register',
+                element: <RegisterLayout></RegisterLayout>,
             },
             {
                 path: '/',
