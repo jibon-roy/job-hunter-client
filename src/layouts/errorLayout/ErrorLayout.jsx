@@ -5,7 +5,7 @@ const ErrorLayout = () => {
     return (
         <div>
             <Helmet>
-                <title>Job Hunter | 404 Error Page !</title>
+                <title>JH | 404 Error Page !</title>
             </Helmet>
             <div className="flex h-[100vh] justify-center items-center w-full text-primary-blue">
                 <div>

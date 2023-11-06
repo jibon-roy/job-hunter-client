@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import TabLayout from "./TabLayout";
 import Banner from "./banner";
+import { Helmet } from "react-helmet-async";
 
 
 const HomeLayout = () => {
     return (
         <div>
+            <Helmet>
+                <title>Job Hunter | Home</title>
+            </Helmet>
             <section>
                 <Banner></Banner>
             </section>

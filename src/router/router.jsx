@@ -7,6 +7,9 @@ import RegisterLayout from "../layouts/RegisterLayout/RegisterLayout";
 import AllJobs from "../layouts/AllJobs/AllJobs";
 import JobDetails from "../layouts/jobDetails/jobDetails";
 import AddJob from "../layouts/addJob/AddJob";
+import MyPostedJobs from "../layouts/myPostedJobs/MyPostedJobs";
+import MyBids from "../layouts/myBids/MyBids";
+import BidRequests from "../layouts/BidRequests/BidRequests";
 
 
 const router = createBrowserRouter([
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
             {
                 path: '/add',
                 element: <AddJob></AddJob>,
+            },
+            {
+                path: '/posted',
+                element: <MyPostedJobs></MyPostedJobs>,
+            },
+            {
+                path: '/bids',
+                element: <MyBids></MyBids>,
+            },
+            {
+                path: '/requests',
+                element: <BidRequests></BidRequests>,
             },
             {
                 path: '/login',

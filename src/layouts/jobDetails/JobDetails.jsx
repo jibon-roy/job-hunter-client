@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import JobBidInput from "./JobBidInput";
+import { Helmet } from "react-helmet-async";
 
 const JobDetails = () => {
     return (
         <div className="px-5">
+            <Helmet>
+                <title>JH | Job Details</title>
+            </Helmet>
             <div className="text-sm breadcrumbs">
                 <ul>
                     <li><a>Home</a></li>

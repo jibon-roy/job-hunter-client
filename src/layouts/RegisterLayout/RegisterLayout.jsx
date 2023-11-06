@@ -17,7 +17,7 @@ const RegisterLayout = () => {
     return (
         <div>
             <Helmet>
-                <title> Job Hunter | Register</title>
+                <title> JH | Register</title>
             </Helmet>
             <form onSubmit={handleLoginSubmit} className="text-gray-600 min-h-[80vh] flex items-center body-font">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">

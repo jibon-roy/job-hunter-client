@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PrimaryButton from "../../components/button/PrimaryButton";
+import { Helmet } from "react-helmet-async";
 
 
 const AddJob = () => {
@@ -18,6 +19,9 @@ const AddJob = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>JH | Add Job</title>
+            </Helmet>
             <div className="text-sm breadcrumbs pl-5">
                 <ul>
                     <li><Link to='/'>Home</Link></li>
@@ -73,7 +77,7 @@ const AddJob = () => {
                                     <div className="p-2 w-1/2">
                                         <div className="relative">
                                             <label htmlFor="maxPrice" className="leading-7 text-sm ">Maximum Price:</label>
-                                            <input type="number" id="maxPrice" name="maxPrice" placeholder="Maximum Price" className="w-full bg-gray-300 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                            <input type="number" id="maxPrice" name="maxPrice" placeholder="Maximum Price $" className="w-full bg-gray-300 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                         </div>
                                     </div>
                                 </div>

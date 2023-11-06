@@ -15,7 +15,7 @@ const LoginLayout = () => {
     return (
         <div>
             <Helmet>
-                <title> Job Hunter | Login</title>
+                <title> JH | Login</title>
             </Helmet>
             <form onSubmit={handleLoginSubmit} className="text-gray-600 min-h-[80vh] flex items-center body-font">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
