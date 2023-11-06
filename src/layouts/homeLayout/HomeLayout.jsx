@@ -12,7 +12,7 @@ const HomeLayout = () => {
             <section>
                 <TabLayout></TabLayout>
                 <div className='text-xl flex justify-center font-semibold items-center my-10'>
-                    <Link className='text-primary-blue hover:no-underline underline'>Explore More  &#187;</Link>
+                    <Link to='/jobs' className='text-primary-blue hover:no-underline underline'>Explore More  &#187;</Link>
                 </div>
             </section>
         </div>

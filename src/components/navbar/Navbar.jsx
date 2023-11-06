@@ -7,8 +7,8 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/all-jobs'>All Jobs</NavLink></li>
-        <li><NavLink to='/jobs/add'>Add Job</NavLink></li>
+        <li><NavLink to='/jobs'>Jobs</NavLink></li>
+        <li><NavLink to='/add'>Add Job</NavLink></li>
         <li><NavLink to='/jobs/posted'>My Posted Jobs</NavLink></li>
         <li><NavLink to='/jobs/bids'>My Bids</NavLink></li>
         <li><NavLink to='/jobs/requests'>Bid Requests</NavLink></li>
@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="drawer text-base">
+            <div className="drawer z-50 text-base bg-neutral-50">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
                     {/* Navbar */}

@@ -24,7 +24,7 @@ const Banner = () => {
     console.log(sliders);
 
     return (
-        <>
+        <div className='-z-50'>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -40,11 +40,11 @@ const Banner = () => {
                 className="mySwiper"
             >
                 {
-                    sliders?.map((slider, key) => <SwiperSlide key={key}><Slider slider={slider}></Slider></SwiperSlide>)
+                    sliders?.map((slider, key) => <SwiperSlide className='-z-50' key={key}><Slider slider={slider}></Slider></SwiperSlide>)
                 }
 
             </Swiper>
-        </>
+        </div>
     );
 };
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const Job = () => {
+
     return (
         <div className=" bg-base-100 border-primary-blue hover:border-neutral-900 border rounded-md">
             <div className="flex flex-col p-3">
@@ -33,7 +34,7 @@ const Job = () => {
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div className="card-actions justify-between items-center">
                     <div>Category: </div>
-                    <Link to='jobs/id'>
+                    <Link to='/jobs/id'>
                         <button className="rounded-none btn bg-primary-blue hover:bg-primary-blue-hover normal-case text-neutral-50">Bid Now</button></Link>
                 </div>
             </div>
