@@ -16,3 +16,11 @@ li a:hover {
 li a:focus {
     background-color: transparent !important;
 }
+
+.my-btn {
+    padding: 0 8px;
+}
+
+.my-btn:hover {
+    border: 1px solid #007efe;
+}

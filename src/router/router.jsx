@@ -10,6 +10,7 @@ import AddJob from "../layouts/addJob/AddJob";
 import MyPostedJobs from "../layouts/myPostedJobs/MyPostedJobs";
 import MyBids from "../layouts/myBids/MyBids";
 import BidRequests from "../layouts/BidRequests/BidRequests";
+import PrivetLayout from "../layouts/privetLayout/PrivetLayout";
 
 
 const router = createBrowserRouter([
@@ -28,23 +29,23 @@ const router = createBrowserRouter([
             },
             {
                 path: '/jobs/id',
-                element: <JobDetails></JobDetails>,
+                element: <PrivetLayout><JobDetails></JobDetails></PrivetLayout>,
             },
             {
                 path: '/add',
-                element: <AddJob></AddJob>,
+                element: <PrivetLayout><AddJob></AddJob></PrivetLayout>,
             },
             {
                 path: '/posted',
-                element: <MyPostedJobs></MyPostedJobs>,
+                element: <PrivetLayout><MyPostedJobs></MyPostedJobs></PrivetLayout>,
             },
             {
                 path: '/bids',
-                element: <MyBids></MyBids>,
+                element: <PrivetLayout><MyBids></MyBids></PrivetLayout>,
             },
             {
                 path: '/requests',
-                element: <BidRequests></BidRequests>,
+                element: <PrivetLayout><BidRequests></BidRequests></PrivetLayout>,
             },
             {
                 path: '/login',

@@ -1,19 +1,42 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../logo/Logo";
+import Avatar from "../../assets/avatar.jpg"
 import './nav.css'
+import { useContext } from "react";
+import { AuthContext } from "../../utility/AuthProvider";
 
 
 const Navbar = () => {
 
+    const { user, logOut } = useContext(AuthContext);
+
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/jobs'>Jobs</NavLink></li>
-        <li><NavLink to='/add'>Add Job</NavLink></li>
-        <li><NavLink to='/posted'>My Posted Jobs</NavLink></li>
-        <li><NavLink to='/bids'>My Bids</NavLink></li>
-        <li><NavLink to='/requests'>Bid Requests</NavLink></li>
-        <li><NavLink to='/login'>Login</NavLink></li>
-        <Link to='/register'><button className="btn bg-primary-blue hover:bg-primary-blue-hover text-base-100 normal-case">Register</button></Link>
+        {user ?
+            <>
+                <li><NavLink to='/add'>Add Job</NavLink></li>
+                <li><NavLink to='/posted'>My Posted Jobs</NavLink></li>
+                <li><NavLink to='/bids'>My Bids</NavLink></li>
+                <li><NavLink to='/requests'>Bid Requests</NavLink></li>
+            </> :
+            <></>
+        }
+        {user ? <>
+            <div className="btn my-btn rounded-full normal-case avatar flex justify-center items-center gap-2">
+                <div className="w-10 rounded-full">
+                    <img src={user?.photoURL ? user?.photoURL : Avatar} alt="" />
+                </div>
+                <p>{user?.displayName}</p>
+            </div>
+            <li><Link><button onClick={logOut} className="btn bg-primary-blue hover:bg-primary-blue-hover text-base-100 normal-case">Log out</button></Link></li>
+        </>
+            : <>
+                <li><NavLink to='/login'>Login</NavLink></li>
+                <li><Link to='/register'><button className="btn bg-primary-blue hover:bg-primary-blue-hover text-base-100 normal-case">Register</button></Link></li>
+            </>
+        }
+
     </>
 
     return (

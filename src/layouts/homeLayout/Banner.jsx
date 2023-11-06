@@ -18,10 +18,8 @@ const Banner = () => {
     useEffect(() => {
         axios('/sliders')
             .then(res => setSliders(res.data))
-            .then(err => console.log(err))
+            .catch(err => console.log(err))
     }, [])
-
-    console.log(sliders);
 
     return (
         <div className='-z-50'>

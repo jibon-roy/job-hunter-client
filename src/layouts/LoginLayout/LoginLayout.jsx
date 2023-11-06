@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
 import google from '../../assets/google.png';
 import { Helmet } from "react-helmet-async";
+import { useContext } from "react";
+import { AuthContext } from "../../utility/AuthProvider";
 
 const LoginLayout = () => {
+
+    const { logInWithEmailPassword, loginWithGoogle } = useContext(AuthContext);
 
     const handleLoginSubmit = (e) => {
         e.preventDefault();
         const form = e.currentTarget;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+
+        logInWithEmailPassword(email, password)
     }
 
     return (
@@ -44,7 +49,7 @@ const LoginLayout = () => {
                         <button type="submit" className="text-white btn normal-case hover:bg-primary-blue-hover font-medium text-neutral-50 bg-primary-blue border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Login</button>
                         <p className="text-sm text-gray-500 mt-3">Do not have an account? Please  <Link to='/register'><span className="text-primary-blue font-medium">Register</span>.</Link></p>
                         <div className="divider">OR</div>
-                        <button className="text-white btn normal-case font-medium  border-0 py-2 px-8 focus:outline-none  rounded text-base"><img src={google} className="w-5" />Google</button>
+                        <button onClick={loginWithGoogle} className="text-white btn normal-case font-medium  border-0 py-2 px-8 focus:outline-none  rounded text-base"><img src={google} className="w-5" />Google</button>
                     </div>
                 </div>
             </form>
