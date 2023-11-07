@@ -27,7 +27,6 @@ const AddJob = () => {
         axios.post('/jobs', job)
             .then(res => {
                 const postedJobs = [res.data.insertedId]
-                console.log(postedJobs);
                 if (res) {
                     axios.put(`/users/${employeeEmail}`, postedJobs)
                         .then()

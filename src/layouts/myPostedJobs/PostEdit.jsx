@@ -1,12 +1,15 @@
 import PrimaryButton from "../../components/button/PrimaryButton";
-import DangerButton from "../../components/button/DengerButton";
 import { PropTypes } from "prop-types";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
-
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+import { AuthContext } from "../../utility/AuthProvider";
 
 const PostEdit = ({ job, index }) => {
+
+    const { user } = useContext(AuthContext)
 
     const [post, setPost] = useState({})
 
@@ -15,6 +18,7 @@ const PostEdit = ({ job, index }) => {
             .then(res => setPost(res.data))
             .catch(err => console.log(err))
     }, [job])
+
 
     const handleUpdateJob = (e) => {
         e.preventDefault();
@@ -26,6 +30,54 @@ const PostEdit = ({ job, index }) => {
         const maxPrice = form.maxPrice.value;
         const jobDescription = form.jobDescription.value;
         console.log(jobTitle, deadline, category, minPrice, maxPrice, jobDescription);
+    }
+
+    const handleDeletePost = () => {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+        swalWithBootstrapButtons.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/postedData?postId=${job}`, { method: 'DELETE' })
+                    .then(res => console.log(res))
+                    .catch(err => console.log(err))
+
+                fetch(`http://localhost:5000/deleteJobDataFromUser?email=${user?.email}&postId=${job}`, { method: 'DELETE' })
+                    .then(res => console.log(res))
+                    .catch(err => console.log(err))
+
+                swalWithBootstrapButtons.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                }).then(location.reload());
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire({
+                    title: "Cancelled",
+                    text: "Your imaginary file is safe :)",
+                    icon: "error"
+                });
+            }
+        });
+
+
+
     }
 
     return (
@@ -85,7 +137,7 @@ const PostEdit = ({ job, index }) => {
                             </div>
                             <div className="p-2 w-full flex justify-around items-center">
                                 <PrimaryButton>Update</PrimaryButton>
-                                <DangerButton>Delete</DangerButton>
+                                <button type="reset" className="text-white btn normal-case hover:bg-red font-medium text-neutral-50 bg-red border-0 py-2 px-5 focus:outline-none hover:bg-blue-600 rounded text-lg" onClick={handleDeletePost}>Delete</button>
                             </div>
                         </div>
                     </div>

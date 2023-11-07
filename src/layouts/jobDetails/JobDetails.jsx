@@ -72,42 +72,42 @@ const JobDetails = () => {
                             <tbody>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">
                                     <td className="px-4 py-2">
-                                        Lorem ipsum dolor sit amet.
+                                        {job?.jobTitle}
                                     </td>
                                 </tr>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">
                                     <td className="px-4 py-2">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        {job?.jobTitle}
                                     </td>
                                 </tr>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">
                                     <td className="px-4 py-2">
-                                        Lorem ipsum dolor sit amet consectetur.
+                                        {job?.jobTitle}
                                     </td>
                                 </tr>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">
                                     <td className="px-4 py-2">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, quae.
+                                        {job?.jobTitle}
                                     </td>
                                 </tr>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">
                                     <td className="px-4 py-2">
-                                        Lorem ipsum dolor sit amet.
+                                        {job?.jobTitle}
                                     </td>
                                 </tr>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">
                                     <td className="px-4 py-2">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        {job?.jobTitle}
                                     </td>
                                 </tr>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">
                                     <td className="px-4 py-2">
-                                        Lorem ipsum dolor sit amet consectetur.
+                                        {job?.jobTitle}
                                     </td>
                                 </tr>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">
                                     <td className="px-4 py-2">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, quae.
+                                        {job?.jobTitle}
                                     </td>
                                 </tr>
                             </tbody>

@@ -4,7 +4,6 @@ import Job from "./Job";
 
 const JobContainer = ({ data }) => {
 
-    console.log(data);
 
     return (
         <>

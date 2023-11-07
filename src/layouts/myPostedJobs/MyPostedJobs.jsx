@@ -34,6 +34,7 @@ const MyPostedJobs = () => {
         }
     })
 
+
     // if (isLoading) {
     //     return <div className="w-full h-[90vh] flex justify-center items-center"><span className="loading flex loading-dots loading-lg"></span></div>
     // }
