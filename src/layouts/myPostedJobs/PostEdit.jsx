@@ -29,7 +29,28 @@ const PostEdit = ({ job, index }) => {
         const minPrice = form.minPrice.value;
         const maxPrice = form.maxPrice.value;
         const jobDescription = form.jobDescription.value;
-        console.log(jobTitle, deadline, category, minPrice, maxPrice, jobDescription);
+
+        const updateJobData = { post, jobTitle, deadline, category, minPrice, maxPrice, jobDescription }
+
+        axios.put('http://localhost:5000/updateJob', updateJobData)
+            .then(res => {
+                if (res) {
+                    Swal.fire({
+                        title: "Updated!",
+                        text: "Your file has been Updated.",
+                        icon: "success"
+                    });
+                }
+            })
+            .catch(err => {
+                if (err) {
+                    Swal.fire({
+                        title: "Something is wrong.",
+                        text: "Please try again.",
+                        icon: "error"
+                    });
+                }
+            })
     }
 
     const handleDeletePost = () => {
@@ -70,7 +91,7 @@ const PostEdit = ({ job, index }) => {
             ) {
                 swalWithBootstrapButtons.fire({
                     title: "Cancelled",
-                    text: "Your imaginary file is safe :)",
+                    text: "File is not deleted.",
                     icon: "error"
                 });
             }
@@ -90,7 +111,7 @@ const PostEdit = ({ job, index }) => {
                             <div className="p-2">
                                 <div className="relative">
                                     <label htmlFor="email" className="leading-7 text-sm ">User Email</label>
-                                    <input type="email" autoComplete="word" id="email" defaultValue={post?.employeeEmail} disabled name="email" className="w-full bg-neutral-50 input-disabled bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    <input type="email" autoComplete="word" id="email" defaultValue={user?.email} disabled name="email" className="w-full bg-neutral-50 input-disabled bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                 </div>
                             </div>
                             <div className="p-2">
@@ -111,9 +132,9 @@ const PostEdit = ({ job, index }) => {
                                     <br />
                                     <select id="category" defaultValue={post?.category} name="category" required className="w-full bg-gray-300 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
                                         <option value="default" disabled>Select a category</option>
-                                        <option value="WebDeveloper">Web Developer</option>
-                                        <option value="GraphicsDesigner">Graphics Designer</option>
-                                        <option value="DigitalMarketer">Digital Marketer</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Graphics Design">Graphics Design</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
                                     </select>
                                 </div>
                             </div>
