@@ -13,7 +13,8 @@ export default {
       'primary-dark': '#233349',
       'primary-white': '#ffffff',
       'red': '#ea2323',
-      'red-hover': '#c92222'
+      'red-hover': '#c92222',
+      'green': '#32bb32'
     }
   },
   plugins: [require('daisyui')],
