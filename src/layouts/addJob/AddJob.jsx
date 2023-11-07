@@ -24,9 +24,14 @@ const AddJob = () => {
         const jobDescription = form.jobDescription.value;
         const job = { employeeEmail, jobTitle, deadline, category, minPrice, maxPrice, jobDescription };
 
-        axios.post('/jobs', job, { withCredentials: true })
+        axios.post('/jobs', job)
             .then(res => {
+                const postedJobs = [res.data.insertedId]
+                console.log(postedJobs);
                 if (res) {
+                    axios.put(`/users/${employeeEmail}`, postedJobs)
+                        .then()
+                        .catch()
                     Swal.fire({
                         title: 'Job Added!',
                         text: 'Job Added Successful.',

@@ -53,7 +53,6 @@ const AuthProvider = ({ children }) => {
                 }
             })
             .catch(error => console.error(error))
-
     }
 
     useEffect(() => {
