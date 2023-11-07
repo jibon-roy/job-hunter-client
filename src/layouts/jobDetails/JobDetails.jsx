@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import JobBidInput from "./JobBidInput";
 import { Helmet } from "react-helmet-async";
 
+
 const JobDetails = () => {
+
+    const jobData = useLoaderData();
+
+    const job = jobData[0];
+
     return (
         <div className="px-5">
             <Helmet>
@@ -21,28 +27,40 @@ const JobDetails = () => {
                         <div className="font-medium text-primary-blue text-3xl mb-5">
                             Job-Details:
                         </div>
-                        <div className="card-title">
-                            Job Name:
+                        <table className="font-medium">
+                            <tbody>
+                                <tr>
+                                    <td > Job Name:</td>
+                                    <td className="px-4 py-1"> <span className="font-bold text-primary-blue">{job?.jobTitle}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Deadline:</td>
+                                    <td className="px-4 py-1">{job?.deadline}</td>
+                                </tr>
+                                <tr>
+                                    <td> Price range: </td>
+                                    <td className="px-4 py-1">{'$' + job?.minPrice + " - " + '$' + job?.maxPrice}</td>
+                                </tr>
+                                <tr>
+                                    <td> Job Category:</td>
+                                    <td className="px-4 py-1"> {job?.category}</td>
+                                </tr>
+                                <tr>
+                                    <td> Employee Contact:</td>
+                                    <td className="px-4 py-1"> {job?.employeeEmail}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div className="my-5">
+                            <div className=" text-xl font-bold">Job Description:</div>
+                            <p className="text-justify">{job?.jobDescription}</p>
                         </div>
-                        <div className="card-title">
-                            Deadline:
-                        </div>
-                        <div className="card-title">
-                            Price range:
-                        </div>
-                        <div className="card-title">
-                            Job Category:
-                        </div>
-                        <div className="card-title">
-                            Job Owner:
-                        </div>
-                        <div className="card-title">
-                            Job Description:
-                        </div>
-                        <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veniam quaerat possimus soluta nulla distinctio perspiciatis quia eum maxime autem eos, omnis, libero dignissimos rerum doloribus? Modi, aliquid. Cumque quas in ex dolorem consectetur explicabo voluptatem consequatur tempora illum corrupti, aliquid, adipisci laboriosam nostrum iusto praesentium tenetur, odit assumenda sint.</p>
+
+
                     </div>
                     <div>
-                        <JobBidInput></JobBidInput>
+                        <JobBidInput employee={job?.employeeEmail}></JobBidInput>
                     </div>
                 </div>
                 <div>

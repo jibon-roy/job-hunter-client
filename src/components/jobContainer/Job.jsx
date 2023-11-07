@@ -34,7 +34,7 @@ const Job = ({ data }) => {
                 <p>{data?.jobDescription.slice(0, 80) + '...Read more'}</p>
                 <div className="card-actions mt-4 justify-between items-center">
                     <div className="font-semibold">Category: <br /> {data?.category} </div>
-                    <Link to='/jobs/id'>
+                    <Link to={`/jobs/${data?._id}`}>
                         <button className="rounded-none btn bg-primary-blue hover:bg-primary-blue-hover normal-case text-neutral-50">Bid Now</button></Link>
                 </div>
             </div>

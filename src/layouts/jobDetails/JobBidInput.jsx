@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import PrimaryButton from "../../components/button/PrimaryButton";
+import { AuthContext } from "../../utility/AuthProvider";
+import { PropTypes } from "prop-types";
 
+const JobBidInput = ({ employee }) => {
 
-const JobBidInput = () => {
+    const { user } = useContext(AuthContext)
 
     const handleBidSubmit = (e) => {
         e.preventDefault();
@@ -15,8 +19,8 @@ const JobBidInput = () => {
         <form onSubmit={handleBidSubmit}>
             <section className=" body-font relative">
                 <div className="container px-5 my-5 mx-auto">
-                    <div className="flex flex-col text-center w-full mb-12">
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-primary-blue">Place your Bid</h1>
+                    <div className="flex flex-col text-center w-full mb-5">
+                        <h1 className="sm:text-3xl mt-5 text-2xl font-medium title-font mb-2 text-primary-blue">Place your Bid</h1>
                         <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Get your job and find the way of life.</p>
                     </div>
                     <div className="lg:w-1/2 md:w-2/3 mx-auto">
@@ -36,13 +40,13 @@ const JobBidInput = () => {
                             <div className="p-2">
                                 <div className="relative">
                                     <label htmlFor="myEmail" className="leading-7 text-sm ">User email:</label>
-                                    <input type="email" id="myEmail" disabled name="myEmail" placeholder="example@gmail.com" className="w-full bg-gray-300 input-disabled rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    <input type="email" id="myEmail" readOnly value={user?.email} name="myEmail" placeholder="example@gmail.com" className="w-full bg-gray-300 input-disabled rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                 </div>
                             </div>
                             <div className="p-2">
                                 <div className="relative">
                                     <label htmlFor="buyerEmail" className="leading-7 text-sm ">Employee email:</label>
-                                    <input type="email" id="buyerEmail" disabled name="buyerEmail" placeholder="example@gmail.com" className="w-full bg-gray-300 input-disabled rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    <input type="email" id="buyerEmail" readOnly value={employee} name="buyerEmail" placeholder="example@gmail.com" className="w-full bg-gray-300 input-disabled rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                 </div>
                             </div>
                             <div className="p-2 w-full text-center">
@@ -55,5 +59,10 @@ const JobBidInput = () => {
         </form>
     );
 };
+
+JobBidInput.propTypes = {
+    employee: PropTypes.node
+}
+
 
 export default JobBidInput;

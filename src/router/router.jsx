@@ -14,6 +14,7 @@ import PrivetLayout from "../layouts/privetLayout/PrivetLayout";
 import PublicLayout from "../layouts/publicLayout/PublicLayout";
 
 
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -29,8 +30,9 @@ const router = createBrowserRouter([
                 element: <AllJobs></AllJobs>,
             },
             {
-                path: '/jobs/id',
+                path: '/jobs/:id',
                 element: <PrivetLayout><JobDetails></JobDetails></PrivetLayout>,
+                loader: async ({ params }) => await fetch(`http://localhost:5000/jobs/${params.id}`)
             },
             {
                 path: '/add',
