@@ -11,6 +11,7 @@ import MyPostedJobs from "../layouts/myPostedJobs/MyPostedJobs";
 import MyBids from "../layouts/myBids/MyBids";
 import BidRequests from "../layouts/BidRequests/BidRequests";
 import PrivetLayout from "../layouts/privetLayout/PrivetLayout";
+import PublicLayout from "../layouts/publicLayout/PublicLayout";
 
 
 const router = createBrowserRouter([
@@ -49,16 +50,13 @@ const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <LoginLayout></LoginLayout>,
+                element: <PublicLayout><LoginLayout></LoginLayout></PublicLayout>,
             },
             {
                 path: '/register',
-                element: <RegisterLayout></RegisterLayout>,
+                element: <PublicLayout><RegisterLayout></RegisterLayout></PublicLayout>,
             },
-            {
-                path: '/',
-                element: <HomeLayout></HomeLayout>,
-            },
+
         ]
     }
 ])

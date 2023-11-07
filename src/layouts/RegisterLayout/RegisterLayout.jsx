@@ -7,6 +7,7 @@ import { AuthContext } from "../../utility/AuthProvider";
 import { useState } from "react";
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import axios from "axios";
 
 const RegisterLayout = () => {
 
@@ -34,6 +35,7 @@ const RegisterLayout = () => {
         }
 
         const photoUrl = form.url.value;
+        const userData = { name, email }
 
         // Creating User With Email and password
         createUserEmailPassword(email, password)
@@ -41,6 +43,9 @@ const RegisterLayout = () => {
                 console.log(result.user);
                 if (result.user) {
                     profileUpdate(name, photoUrl);
+                    axios.post('/users', userData,)
+                        .then(res => console.log(res))
+                        .catch(err => console.log(err));
                     Swal.fire({
                         title: 'Thank you!',
                         text: 'Create User Successful',
@@ -52,7 +57,7 @@ const RegisterLayout = () => {
                     })
                 }
             })
-            .then(error => {
+            .catch(error => {
                 if (error) {
                     Swal.fire({
                         title: 'Opps Sorry',
@@ -60,6 +65,8 @@ const RegisterLayout = () => {
                         icon: 'error',
                         confirmButtonText: 'Okey',
                         confirmButtonColor: "#007efe"
+                    }).then(() => {
+                        location.reload();
                     })
                 }
             })

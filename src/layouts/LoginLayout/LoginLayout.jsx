@@ -3,8 +3,11 @@ import google from '../../assets/google.png';
 import { Helmet } from "react-helmet-async";
 import { useContext } from "react";
 import { AuthContext } from "../../utility/AuthProvider";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const LoginLayout = () => {
+
 
     const { logInWithEmailPassword, loginWithGoogle } = useContext(AuthContext);
 
@@ -15,6 +18,35 @@ const LoginLayout = () => {
         const password = form.password.value;
 
         logInWithEmailPassword(email, password)
+            .then(res => {
+                if (res.user) {
+                    Swal.fire({
+                        title: 'Thank you!',
+                        text: 'Login Successful',
+                        icon: 'success',
+                        confirmButtonText: 'Done',
+                        confirmButtonColor: "#007efe"
+                    }).then(() => {
+                        location.reload();
+
+                    });
+                }
+            })
+            .catch(err => {
+                if (err) {
+                    Swal.fire({
+                        title: 'Opps Sorry!',
+                        text: 'Username or Password Invalid',
+                        icon: 'error',
+                        confirmButtonText: 'Done',
+                        confirmButtonColor: "#007efe"
+                    }).then(() => {
+                        location.reload();
+                    })
+                }
+            })
+
+        form.reset();
     }
 
     return (
@@ -40,11 +72,11 @@ const LoginLayout = () => {
                         <h2 className="text-gray-900 text-2xl font-medium title-font mb-5"><span className="text-primary-blue">Job Hunter</span> Log In</h2>
                         <div className="relative mb-4">
                             <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                            <input type="email" id="email" name="email" autoComplete="true" placeholder="example@gmail.com" className="w-full bg-white rounded border border-primary-dark focus:focus:border-primary-blue focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="email" id="email" required name="email" autoComplete="true" placeholder="example@gmail.com" className="w-full bg-white rounded border border-primary-dark focus:focus:border-primary-blue focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                         </div>
                         <div className="relative mb-4">
                             <label htmlFor="password" className="leading-7 text-sm text-gray-600">Password</label>
-                            <input type="password" autoComplete="false" id="password" placeholder="Password" name="password" className="w-full bg-white rounded border border-primary-dark focus:border-primary-blue focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="password" required autoComplete="false" id="password" placeholder="Password" name="password" className="w-full bg-white rounded border border-primary-dark focus:border-primary-blue focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                         </div>
                         <button type="submit" className="text-white btn normal-case hover:bg-primary-blue-hover font-medium text-neutral-50 bg-primary-blue border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Login</button>
                         <p className="text-sm text-gray-500 mt-3">Do not have an account? Please  <Link to='/register'><span className="text-primary-blue font-medium">Register</span>.</Link></p>

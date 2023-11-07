@@ -4,6 +4,7 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged,
 import { auth } from "../firebase/Auth";
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import axios from "axios";
 
 export const AuthContext = createContext({})
 
@@ -39,8 +40,16 @@ const AuthProvider = ({ children }) => {
     const loginWithGoogle = () => {
         return signInWithPopup(auth, googleUser)
             .then(result => {
+                const data = result.user;
+                const name = data.displayName;
+                const email = data.email;
                 if (result) {
-                    setLoading(true)
+                    const userData = { name, email }
+                    axios.post('/users', userData)
+                        .then(res => console.log(res))
+                        .catch(err => console.log(err))
+                    setLoading(true);
+                    location.reload();
                 }
             })
             .catch(error => console.error(error))
