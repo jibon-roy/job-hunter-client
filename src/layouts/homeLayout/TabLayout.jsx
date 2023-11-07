@@ -27,8 +27,8 @@ const TabLayout = () => {
     // }, [])
 
     const webDevelopmentJob = jobs?.filter(job => job.category === 'Web Development').slice(0, 4)
-    const graphicsDesignerJob = jobs?.filter(job => job.category === 'Web Development').slice(0, 4)
-    const digitalMarketingJob = jobs?.filter(job => job.category === 'Web Development').slice(0, 4)
+    const graphicsDesignerJob = jobs?.filter(job => job.category === 'Graphics Design').slice(0, 4)
+    const digitalMarketingJob = jobs?.filter(job => job.category === 'Digital Marketing').slice(0, 4)
     // console.log(webDevelopmentJob);
 
     if (isLoading) {
@@ -37,7 +37,7 @@ const TabLayout = () => {
 
     return (
         <div className='mx-auto my-20'>
-            <div className='text-center text-4xl mb-5 font-semibold text-primary-blue'>
+            <div className='text-center text-2xl md:text-4xl mb-5 font-semibold text-primary-blue'>
                 Browse Jobs by Category
             </div>
             <div className='text-center mb-14 font-semibold'>

@@ -79,7 +79,7 @@ const AddJob = () => {
                                 <div className="p-2">
                                     <div className="relative">
                                         <label htmlFor="email" className="leading-7 text-sm ">User Email</label>
-                                        <input type="email" value={employeeEmail} autoComplete="word" id="email" readOnly name="email" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                        <input type="email" value={employeeEmail} autoComplete="word" id="email" readOnly name="email" className="input-disabled w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                     </div>
                                 </div>
                                 <div className="p-2">
