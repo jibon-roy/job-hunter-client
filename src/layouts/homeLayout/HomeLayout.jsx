@@ -25,7 +25,7 @@ const HomeLayout = () => {
             <section>
                 <div className="hero min-h-[70vh] text-primary-white bg-primary-blue">
                     <div className="hero-content flex-col lg:flex-row-reverse">
-                        <img src="https://thumbs.dreamstime.com/b/robot-holding-blue-job-word-gray-background-robot-holding-job-word-148942671.jpg" className=" w-[70%] md:w-[50%] rounded-lg shadow-2xl" />
+                        <img src="https://thumbs.dreamstime.com/b/get-new-job-against-blue-sky-word-businessman-posing-arms-raised-49872146.jpg" className=" w-[70%] md:w-[50%] rounded-lg shadow-2xl" />
                         <div>
                             <h1 className="text-5xl font-bold">Get Start with us</h1>
                             <p className="py-6 px-3 text-justify">
