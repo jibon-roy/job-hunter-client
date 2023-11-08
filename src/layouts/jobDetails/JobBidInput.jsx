@@ -21,7 +21,7 @@ const JobBidInput = ({ title, employee, jobId }) => {
 
         const bidData = { jobId, title, employee, amount, deadline, status: false }
 
-        const employeeData = { email: user?.email, title, amount, deadline, status: false }
+        const employeeData = { jobId, email: user?.email, title, amount, deadline, status: false }
 
         axios.put(`/user/bid?setEmail=${user?.email}`, bidData)
             .then(res => {

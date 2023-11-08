@@ -34,8 +34,10 @@ const BidRequests = () => {
             .catch(err => console.log(err))
     }, [user?.email])
 
-    const bidData = bidDatas?.map(bidUsers => bidUsers?.bidUsers)
+    const bidData = bidDatas?.filter(bidUsers => bidUsers?.bidUsers).map(bidUsers => bidUsers?.bidUsers);
+    // const bidId = bidDatas?.filter(bidUsers => bidUsers?.bidUsers).map(bidUsers => bidUsers?._id);
     // const bids = bidDatas.map(bid => console.log(bid[0]));
+
 
     function convertToArrayList(arr) {
         const result = [];
@@ -56,7 +58,8 @@ const BidRequests = () => {
 
 
     const bids = convertToArrayList(bidData)
-
+    // const bidIds = convertToArrayList(bidId)
+    // console.log(bidIds);
 
     return (
         <div>
@@ -89,7 +92,12 @@ const BidRequests = () => {
                         </thead>
                         <tbody>
                             {
-                                bids?.map((bid, key) => <HandleBids key={key} serial={key} data={bid}></HandleBids>)
+                                bids ?
+                                    bids?.map((bid, key) => <HandleBids key={key} serial={key} data={bid}></HandleBids>)
+                                    :
+                                    <tr>
+                                        <td className="text-center">No bid request here.</td>
+                                    </tr>
                             }
 
                         </tbody>

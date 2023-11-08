@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
-
+import { motion } from "framer-motion"
 
 const Job = ({ data }) => {
 
     return (
-        <div className=" bg-base-100 border-primary-blue hover:border-neutral-900 border rounded-md">
+        <motion.div whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }} className=" bg-base-100 border-primary-blue hover:border-neutral-900 border rounded-md">
             <div className="flex flex-col p-3">
                 <div className="flex gap-2 items-start">
                     <div>
@@ -38,7 +39,7 @@ const Job = ({ data }) => {
                         <button className="rounded-none btn bg-primary-blue hover:bg-primary-blue-hover normal-case text-neutral-50">Bid Now</button></Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

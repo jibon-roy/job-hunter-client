@@ -14,7 +14,7 @@ const PrivetLayout = ({ children }) => {
     if (user) {
         return children;
     } else {
-        return <Navigate to='/'></Navigate>
+        return <Navigate to='/login'></Navigate>
     }
 };
 PrivetLayout.propTypes = {

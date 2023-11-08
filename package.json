@@ -17,6 +17,7 @@
     "axios": "^1.6.0",
     "firebase": "^10.5.2",
     "flat-color-icons": "^1.1.0",
+    "framer-motion": "^10.16.4",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "prop-types": "^15.8.1",
