@@ -19,7 +19,8 @@ const JobBidInput = ({ title, employee, jobId }) => {
         const amount = form.amount.value;
         const deadline = form.deadline.value;
 
-        const bidData = { jobId, title, employee, amount, deadline, status: false }
+
+        const bidData = { jobId: jobId, title, employee, amount, deadline, status: false }
 
         const employeeData = { jobId, email: user?.email, title, amount, deadline, status: false }
 

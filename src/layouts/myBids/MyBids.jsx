@@ -33,7 +33,6 @@ const MyBids = () => {
     // console.log(data);
 
 
-
     return (
         <div>
             <Helmet>
@@ -66,8 +65,9 @@ const MyBids = () => {
                         </thead>
                         <tbody>
                             {
-
-                                bidData?.map((data, key) => <BidTable key={key} value={key} data={data}></BidTable>)
+                                bidData.length > 0 ?
+                                    bidData?.map((data, key) => <BidTable key={key} value={key} data={data}></BidTable>)
+                                    : <tr><td>No bid data</td></tr>
                             }</tbody>
 
                         {/* <tr className="hover  hover:text-primary-blue">
