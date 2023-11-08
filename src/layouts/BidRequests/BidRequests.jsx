@@ -1,8 +1,63 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../utility/AuthProvider";
+// import axios from "axios";
+// import { useQuery } from "@tanstack/react-query";
+import HandleBids from "./HandleBids";
 
 
 const BidRequests = () => {
+
+    const { user } = useContext(AuthContext);
+
+    const [bidDatas, setBidData] = useState([]);
+
+
+    // const { data } = useQuery({
+    //     queryKey: ['bids'],
+    //     queryFn: async () => {
+    //         const bids = await fetch(`http://localhost:5000/myPostedJobs?email=${user?.email}`)
+    //         const data = bids.json();
+    //         return data?.map(bids => bids?.bidUsers?.map(bid => bid))
+
+    //     }
+    // })
+
+    // console.log(data);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/myPostedJobs?email=${user?.email}`)
+            .then(res => res.json())
+            .then(result => setBidData(result))
+            .catch(err => console.log(err))
+    }, [user?.email])
+
+    const bidData = bidDatas?.map(bidUsers => bidUsers?.bidUsers)
+    // const bids = bidDatas.map(bid => console.log(bid[0]));
+
+    function convertToArrayList(arr) {
+        const result = [];
+
+        function flat(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (Array.isArray(arr[i])) {
+                    flat(arr[i]);
+                } else {
+                    result.push(arr[i]);
+                }
+            }
+        }
+
+        flat(arr);
+        return result;
+    }
+
+
+    const bids = convertToArrayList(bidData)
+
+
     return (
         <div>
             <Helmet>
@@ -33,36 +88,10 @@ const BidRequests = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* row 1 */}
-                            <tr className="hover  hover:text-primary-blue">
-                                <th>2</th>
-                                <td>Hart Hagerty</td>
-                                <td>Desktop Support Technician</td>
-                                <td>Purple</td>
-                                <td>Purple</td>
-                                <td>
-                                    <button className="px-2 py-1 bg-primary-blue hover:bg-primary-blue-hover text-primary-white rounded-md">Complete</button>
-                                    <button className="px-2 ml-2 py-1 bg-red hover:bg-red-hover text-primary-white rounded-md">Reject</button>
-                                </td>
-                            </tr>
-                            {/* row 2 */}
-                            <tr className="hover  hover:text-primary-blue">
-                                <th>2</th>
-                                <td>Hart Hagerty</td>
-                                <td>Desktop Support Technician</td>
-                                <td>Purple</td>
-                                <td>Purple</td>
-                                <td>Purple</td>
-                            </tr>
-                            {/* row 3 */}
-                            <tr className="hover  hover:text-primary-blue">
-                                <th>3</th>
-                                <td>Brice Swyre</td>
-                                <td>Tax Accountant</td>
-                                <td>Red</td>
-                                <td>Red</td>
-                                <td>Red</td>
-                            </tr>
+                            {
+                                bids?.map((bid, key) => <HandleBids key={key} serial={key} data={bid}></HandleBids>)
+                            }
+
                         </tbody>
                     </table>
                 </div>

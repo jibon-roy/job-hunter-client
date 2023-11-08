@@ -110,7 +110,7 @@ const PostEdit = ({ job, index }) => {
     return (
         <form onSubmit={handleUpdateJob} className="p-2 mb-10">
             <div className="text-2xl font-semibold text-primary-blue"><span className="text-primary-dark">#Posted Job:</span> {post?.jobTitle} ({index + 1})</div>
-            <section className=" body-font relative rounded-lg border border-primary-blue bg-base-300">
+            <section className=" body-font relative rounded-lg border hover:border-primary-blue focus:border-r-primary-blue active:border-primary-blue  bg-base-300">
                 <div className="container px-5 mt-2 mb-2 mx-auto">
                     <div className="mx-auto">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
