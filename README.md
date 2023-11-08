@@ -1,8 +1,9 @@
-# React + Vite
+# Welcome to My project:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About My Project:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User can register and login on this Job site.
+- User can Add Jobs.
+- Also can update or delete jobs.
+- Can bid a job from job details
+- User can Accept and reject job from bid request
