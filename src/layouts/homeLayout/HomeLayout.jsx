@@ -25,10 +25,10 @@ const HomeLayout = () => {
             <section>
                 <div className="hero min-h-[70vh] text-primary-white bg-primary-blue">
                     <div className="hero-content flex-col lg:flex-row-reverse">
-                        <img src="https://thumbs.dreamstime.com/b/get-new-job-against-blue-sky-word-businessman-posing-arms-raised-49872146.jpg" className=" w-[70%] md:w-[50%] rounded-lg shadow-2xl" />
+                        <img src="https://graduate.northeastern.edu/resources/wp-content/uploads/sites/4/2018/10/shaking-hands-business-people-unsplash.jpg" className=" w-[70%] md:w-[50%] rounded-lg shadow-2xl" />
                         <div>
-                            <h1 className="text-5xl font-bold">Get Start with us</h1>
-                            <p className="py-6 px-3 text-justify">
+                            <h1 className="text-5xl font-bold max-md:text-center">Get Start with us</h1>
+                            <p className="py-6 px-3 text-justify max-md:text-center">
                                 Our job hunter website is your gateway to a world of career opportunities. By
                                 registering on our platform, you unlock a multitude of benefits. First and foremost, it grants you
                                 access to an extensive database of job listings, increasing your chances of finding the perfect job. Additionally, creating a profile
@@ -41,7 +41,7 @@ const HomeLayout = () => {
                 </div>
             </section>
             <section>
-                <div className="hero min-h-[70vh] text-right bg-neutral-50">
+                <div className="hero min-h-[70vh] text-right max-md:text-center bg-neutral-50">
                     <div className="hero-content flex-col lg:flex-row">
                         <img src="https://www.marketing91.com/wp-content/uploads/2020/02/What-Is-Job-Sharing.jpg" className="w-[70%] md:w-[40%] rounded-lg shadow-2xl" />
                         <div>
