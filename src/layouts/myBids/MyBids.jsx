@@ -65,7 +65,7 @@ const MyBids = () => {
                         </thead>
                         <tbody>
                             {
-                                !bidData || bidData.length > 0 ?
+                                bidData?.length > 0 ?
                                     bidData?.map((data, key) => <BidTable key={key} value={key} data={data}></BidTable>)
                                     : <tr><td>No bid data</td></tr>
                             }</tbody>

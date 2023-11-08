@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
                         .then(res => console.log(res))
                         .catch(err => console.log(err))
                     setLoading(true);
-                    location.reload();
+                    // location.reload();
                 }
             })
             .catch(error => console.error(error))
