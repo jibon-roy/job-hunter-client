@@ -13,7 +13,7 @@ import {
 
 const queryClient = new QueryClient()
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'https://b8a11-server-side-jibon-roy.vercel.app';
 axios.defaults.withCredentials = 'true'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

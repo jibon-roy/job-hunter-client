@@ -18,7 +18,7 @@ const BidRequests = () => {
     // const { data } = useQuery({
     //     queryKey: ['bids'],
     //     queryFn: async () => {
-    //         const bids = await fetch(`http://localhost:5000/myPostedJobs?email=${user?.email}`)
+    //         const bids = await fetch(`https://b8a11-server-side-jibon-roy.vercel.app/myPostedJobs?email=${user?.email}`)
     //         const data = bids.json();
     //         return data?.map(bids => bids?.bidUsers?.map(bid => bid))
 
@@ -28,7 +28,7 @@ const BidRequests = () => {
     // console.log(data);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myPostedJobs?email=${user?.email}`)
+        fetch(`https://b8a11-server-side-jibon-roy.vercel.app/myPostedJobs?email=${user?.email}`)
             .then(res => res.json())
             .then(result => setBidData(result))
             .catch(err => console.log(err))
