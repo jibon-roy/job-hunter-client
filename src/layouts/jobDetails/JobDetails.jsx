@@ -30,7 +30,7 @@ const JobDetails = () => {
                         <table className="font-medium">
                             <tbody>
                                 <tr>
-                                    <td > Job Name:</td>
+                                    <td> Job Name:</td>
                                     <td className="px-4 py-1"> <span className="font-bold text-primary-blue">{job?.jobTitle}</span></td>
                                 </tr>
                                 <tr>
@@ -57,10 +57,9 @@ const JobDetails = () => {
                             <p className="text-justify">{job?.jobDescription}</p>
                         </div>
 
-
                     </div>
                     <div>
-                        <JobBidInput employee={job?.employeeEmail}></JobBidInput>
+                        <JobBidInput title={job?.jobTitle} employee={job?.employeeEmail} jobId={job?._id}></JobBidInput>
                     </div>
                 </div>
                 <div>

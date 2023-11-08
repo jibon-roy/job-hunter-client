@@ -2,17 +2,53 @@ import { useContext } from "react";
 import PrimaryButton from "../../components/button/PrimaryButton";
 import { AuthContext } from "../../utility/AuthProvider";
 import { PropTypes } from "prop-types";
+import axios from "axios";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+import { useNavigate } from "react-router-dom";
 
-const JobBidInput = ({ employee }) => {
+const JobBidInput = ({ title, employee, jobId }) => {
 
     const { user } = useContext(AuthContext)
+
+    const navigate = useNavigate();
 
     const handleBidSubmit = (e) => {
         e.preventDefault();
         const form = e.currentTarget;
         const amount = form.amount.value;
         const deadline = form.deadline.value;
-        console.log(amount, deadline);
+
+        const bidData = { jobId, title, employee, amount, deadline, status: false }
+
+        const employeeData = { email: user?.email, title, amount, deadline }
+
+        axios.put(`/user/bid?setEmail=${user?.email}`, bidData)
+            .then(res => {
+                if (res) {
+                    axios.put(`/user/request?jobId=${jobId}`, employeeData)
+                        .then()
+                        .catch()
+                    Swal.fire({
+                        title: 'Bid Successful!',
+                        text: 'Job Bided Successful.',
+                        icon: 'success',
+                        confirmButtonText: 'Done',
+                        confirmButtonColor: "#007efe"
+                    }).then(navigate('/bids'))
+                    form.reset()
+                }
+            }).catch(err => {
+                if (err)
+                    Swal.fire({
+                        title: 'Bid Unsuccessful!',
+                        text: 'Job Bid Not Successful.',
+                        icon: 'error',
+                        confirmButtonText: 'Done',
+                        confirmButtonColor: "#007efe"
+                    })
+            })
+
     }
 
     return (
@@ -50,7 +86,12 @@ const JobBidInput = ({ employee }) => {
                                 </div>
                             </div>
                             <div className="p-2 w-full text-center">
-                                <PrimaryButton>Bid Now</PrimaryButton>
+                                {
+                                    user?.email === employee ? <p className="text-red font-medium text-lg">You can not bid your own posted job!</p>
+                                        :
+                                        <PrimaryButton>Bid Now</PrimaryButton>
+                                }
+
                             </div>
                         </div>
                     </div>
@@ -61,7 +102,9 @@ const JobBidInput = ({ employee }) => {
 };
 
 JobBidInput.propTypes = {
-    employee: PropTypes.node
+    employee: PropTypes.node,
+    jobId: PropTypes.node,
+    title: PropTypes.node
 }
 
 

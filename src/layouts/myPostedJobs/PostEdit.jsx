@@ -73,12 +73,12 @@ const PostEdit = ({ job, index }) => {
             if (result.isConfirmed) {
 
                 fetch(`http://localhost:5000/postedData?postId=${job}`, { method: 'DELETE' })
-                    .then(res => console.log(res))
-                    .catch(err => console.log(err))
+                    .then()
+                    .catch()
 
                 fetch(`http://localhost:5000/deleteJobDataFromUser?email=${user?.email}&postId=${job}`, { method: 'DELETE' })
-                    .then(res => console.log(res))
-                    .catch(err => console.log(err))
+                    .then()
+                    .catch()
 
                 swalWithBootstrapButtons.fire({
                     title: "Deleted!",
@@ -96,10 +96,16 @@ const PostEdit = ({ job, index }) => {
                 });
             }
         });
-
-
-
     }
+
+    // const defaultCategory = post?.category
+    // const [category, setCategory] = useState(defaultCategory);
+    // console.log(category);
+    // const handleOnChange = (e) => {
+    //     setCategory(e.target.value)
+    // }
+
+
 
     return (
         <form onSubmit={handleUpdateJob} className="p-2 mb-10">
@@ -130,7 +136,7 @@ const PostEdit = ({ job, index }) => {
                                 <div className="relative">
                                     <label htmlFor="category" className="leading-7 text-sm ">Category:</label>
                                     <br />
-                                    <select id="category" defaultValue={post?.category} name="category" required className="w-full bg-gray-300 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                                    <select id="category" value={post?.category} name="category" required className="w-full bg-gray-300 rounded border border-gray-300 focus:border-primary-blue focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
                                         <option value="default" disabled>Select a category</option>
                                         <option value="Web Development">Web Development</option>
                                         <option value="Graphics Design">Graphics Design</option>

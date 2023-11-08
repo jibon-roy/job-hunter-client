@@ -1,8 +1,39 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../utility/AuthProvider";
+import axios from "axios";
+import BidTable from "./BidTable";
+// import { useQuery } from "@tanstack/react-query";
 
 const MyBids = () => {
+    const { user } = useContext(AuthContext);
+
+    const [bidData, setBidData] = useState([])
+
+    useEffect(() => {
+        axios.get(`/posted?email=${user?.email}`)
+            .then(res => setBidData(res.data?.bidJobsData))
+            .catch(err => console.log(err))
+    }, [user?.email])
+
+    // bidData.map(job => console.log(job))
+    // console.log(bidData);
+
+    // const { data } = useQuery({
+    //     queryKey: ['job'],
+    //     queryFn: () => {
+    //         const job = axios.get(`/posted?email=${user?.email}`)
+    //             .then(res => setBidData(res.data?.bidJobsData))
+    //             .catch(err => console.log(err));
+    //         return data;
+    //     }
+    // })
+
+    // console.log(data);
+
+
+
     return (
         <div>
             <Helmet>
@@ -20,47 +51,34 @@ const MyBids = () => {
             </div>
             <div className="max-lg:overflow-x-auto">
                 <div className="max-lg:overflow-x-scroll w-[900px] lg:w-[98%] mx-auto">
-                    <table className="table">
+                    <table className="table mb-24">
                         {/* head */}
                         <thead>
                             <tr className="text-lg">
                                 <th>SL No.</th>
                                 <th>Job Title</th>
                                 <th>Email</th>
+                                <th>Bid Price</th>
                                 <th>Deadline</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {/* row 1 */}
-                            <tr className="hover  hover:text-primary-blue">
-                                <th>2</th>
-                                <td>Hart Hagerty</td>
-                                <td>Desktop Support Technician</td>
-                                <td>Purple</td>
-                                <td>Purple</td>
+                            {
+
+                                bidData?.map((data, key) => <BidTable key={key} value={key} data={data}></BidTable>)
+                            }</tbody>
+
+                        {/* <tr className="hover  hover:text-primary-blue">
+                                <th>1</th>
+                                <td>{bidData[0]?.title}</td>
+                                <td>{bidData[0]?.employee}</td>
+                                <td>$ {bidData[0]?.amount}</td>
+                                <td>{bidData[0]?.deadline}</td>
+                                <td>{bidData[0]?.status ? <p className="text-green font-medium">Complete</p> : <p className="text-red font-medium">Pending</p>}</td>
                                 <td><button className="px-2 py-1 hover:bg-primary-blue-hover bg-primary-blue text-primary-white rounded-md">Complete</button></td>
-                            </tr>
-                            {/* row 2 */}
-                            <tr className="hover  hover:text-primary-blue">
-                                <th>2</th>
-                                <td>Hart Hagerty</td>
-                                <td>Desktop Support Technician</td>
-                                <td>Purple</td>
-                                <td>Purple</td>
-                                <td><button className="px-2 py-1 hover:bg-primary-blue-hover bg-primary-blue text-primary-white rounded-md">Complete</button></td>
-                            </tr>
-                            {/* row 3 */}
-                            <tr className="hover  hover:text-primary-blue">
-                                <th>3</th>
-                                <td>Brice Swyre</td>
-                                <td>Tax Accountant</td>
-                                <td>Red</td>
-                                <td>Red</td>
-                                <td>Red</td>
-                            </tr>
-                        </tbody>
+                            </tr> */}
                     </table>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import PrimaryButton from "../../components/button/PrimaryButton";
 import { PropTypes } from "prop-types";
 import { TypeAnimation } from 'react-type-animation';
 import logo from '/logo.png'
+import { Link } from "react-router-dom";
 
 
 // style = {{ backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)' }}
@@ -28,7 +29,7 @@ const Slider = ({ slider }) => {
                             />
                         </h1>
                         <p className="mb-5 text-lg">{slider?.sliderText}</p>
-                        <PrimaryButton>Browse Jobs</PrimaryButton>
+                        <Link to='/jobs'> <PrimaryButton>Browse Jobs</PrimaryButton></Link>
                     </div>
                 </div>
             </div>
