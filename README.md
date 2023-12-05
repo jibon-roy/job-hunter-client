@@ -8,4 +8,4 @@
 - Can bid a job from job details
 - User can Accept and reject job from bid request
 
-## Project Live Link: 🔗 www.job-hunter-site.web.app
+## Project Live Link: 🔗 job-hunter-site.web.app
