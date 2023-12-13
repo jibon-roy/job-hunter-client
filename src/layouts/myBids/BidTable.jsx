@@ -4,7 +4,7 @@ import { useState } from "react";
 const BidTable = ({ data, value }) => {
 
     const [isDisabled, setIsDisabled] = useState(!data?.status)
-    console.log(data.status)
+    console.log(data?.status)
 
     const handleDisabled = () => {
         setIsDisabled(true);
