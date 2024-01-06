@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import TabLayout from "./TabLayout";
 import Banner from "./banner";
 import { Helmet } from "react-helmet-async";
+import Statistics from "./Statistics";
 
 
 const HomeLayout = () => {
@@ -23,6 +24,9 @@ const HomeLayout = () => {
                 </div>
             </section>
             <section>
+                <Statistics></Statistics>
+            </section>
+            <section>
                 <div className="hero min-h-[70vh] text-primary-white bg-primary-blue">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img src="https://graduate.northeastern.edu/resources/wp-content/uploads/sites/4/2018/10/shaking-hands-business-people-unsplash.jpg" className=" w-[70%] md:w-[50%] rounded-lg shadow-2xl" />
@@ -41,7 +45,7 @@ const HomeLayout = () => {
                 </div>
             </section>
             <section>
-                <div className="hero min-h-[70vh] text-right max-md:text-center bg-neutral-50">
+                <div className="hero min-h-[70vh] text-right max-md:text-center">
                     <div className="hero-content flex-col lg:flex-row">
                         <img src="https://www.marketing91.com/wp-content/uploads/2020/02/What-Is-Job-Sharing.jpg" className="w-[70%] md:w-[40%] rounded-lg shadow-2xl" />
                         <div>

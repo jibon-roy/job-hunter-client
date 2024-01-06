@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='container mx-auto'>
+      <div className='container mx-auto bg-gradient-to-br from-primary-blue-secondery to-primary-white '>
         <Navbar></Navbar>
         <div className='min-h-[65vh]'>
           <Outlet></Outlet>

@@ -6,7 +6,7 @@ const Job = ({ data }) => {
 
     return (
         <motion.div whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }} className=" bg-base-100 border-primary-blue hover:border-neutral-900 border rounded-md">
+            whileTap={{ scale: 0.98 }} className=" bg-base-100 border-primary-blue  border rounded-md">
             <div className="flex flex-col p-3">
                 <div className="flex gap-2 items-start">
                     <div>
