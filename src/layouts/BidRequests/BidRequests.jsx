@@ -28,7 +28,7 @@ const BidRequests = () => {
     // console.log(data);
 
     useEffect(() => {
-        fetch(`https://b8a11-server-side-jibon-roy.vercel.app/myPostedJobs?email=${user?.email}`)
+        fetch(`https://job-hunter-server-dun.vercel.app/myPostedJobs?email=${user?.email}`)
             .then(res => res.json())
             .then(result => setBidData(result))
             .catch(err => console.log(err))

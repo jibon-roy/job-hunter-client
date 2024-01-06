@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             {
                 path: '/jobs/:id',
                 element: <PrivetLayout><JobDetails></JobDetails></PrivetLayout>,
-                loader: async ({ params }) => await fetch(`https://b8a11-server-side-jibon-roy.vercel.app/jobs/${params.id}`)
+                loader: async ({ params }) => await fetch(`https://job-hunter-server-dun.vercel.app/jobs/${params.id}`)
             },
             {
                 path: '/add',

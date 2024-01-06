@@ -32,7 +32,7 @@ const PostEdit = ({ job, index }) => {
 
         const updateJobData = { post, jobTitle, deadline, category, minPrice, maxPrice, jobDescription }
 
-        axios.put('https://b8a11-server-side-jibon-roy.vercel.app/updateJob', updateJobData)
+        axios.put('https://job-hunter-server-dun.vercel.app/updateJob', updateJobData)
             .then(res => {
                 if (res) {
                     Swal.fire({
@@ -72,11 +72,11 @@ const PostEdit = ({ job, index }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://b8a11-server-side-jibon-roy.vercel.app/postedData?postId=${job}`, { method: 'DELETE' })
+                fetch(`https://job-hunter-server-dun.vercel.app/postedData?postId=${job}`, { method: 'DELETE' })
                     .then()
                     .catch()
 
-                fetch(`https://b8a11-server-side-jibon-roy.vercel.app/deleteJobDataFromUser?email=${user?.email}&postId=${job}`, { method: 'DELETE' })
+                fetch(`https://job-hunter-server-dun.vercel.app/deleteJobDataFromUser?email=${user?.email}&postId=${job}`, { method: 'DELETE' })
                     .then()
                     .catch()
 
