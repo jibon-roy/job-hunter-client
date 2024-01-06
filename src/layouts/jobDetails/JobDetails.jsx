@@ -24,14 +24,14 @@ const JobDetails = () => {
             <div className="mt-10 grid md:grid-cols-4 gap-5 justify-between">
                 <div className="col-span-3">
                     <div>
-                        <div className="font-medium text-primary-blue text-3xl mb-5">
+                        <div className="font-medium text-primary-indigo text-3xl mb-5">
                             Job-Details:
                         </div>
                         <table className="font-medium">
                             <tbody>
                                 <tr>
                                     <td> Job Name:</td>
-                                    <td className="px-4 py-1"> <span className="font-bold text-primary-blue">{job?.jobTitle}</span></td>
+                                    <td className="px-4 py-1"> <span className="font-bold text-primary-indigo">{job?.jobTitle}</span></td>
                                 </tr>
                                 <tr>
                                     <td>Deadline:</td>
@@ -66,7 +66,7 @@ const JobDetails = () => {
                     <div className="relative overflow-x-auto">
                         <table className="w-full text-left text-gray-500 dark:text-gray-400">
                             <thead className="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                <tr className="border"><th className="bg-primary-blue text-lg text-neutral-50 font-semibold py-2 px-4">Today&#39;s hot Jobs &#187;</th></tr>
+                                <tr className="border"><th className="bg-primary-indigo text-lg text-neutral-50 font-semibold py-2 px-4">Today&#39;s hot Jobs &#187;</th></tr>
                             </thead>
                             <tbody>
                                 <tr className="bg-white border-b border-l border-r dark:bg-gray-800 dark:border-gray-700">

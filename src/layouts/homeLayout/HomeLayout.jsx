@@ -20,14 +20,14 @@ const HomeLayout = () => {
             <section>
                 <TabLayout></TabLayout>
                 <div className='text-xl flex justify-center font-semibold items-center my-10'>
-                    <Link to='/jobs' className='text-primary-blue hover:no-underline underline'>Explore More  &#187;</Link>
+                    <Link to='/jobs' className='text-primary-indigo hover:no-underline underline'>Explore More  &#187;</Link>
                 </div>
             </section>
             <section>
                 <Statistics></Statistics>
             </section>
             <section>
-                <div className="hero min-h-[70vh] text-primary-white bg-primary-blue">
+                <div className="hero min-h-[70vh] text-primary-white bg-primary-indigo">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img src="https://graduate.northeastern.edu/resources/wp-content/uploads/sites/4/2018/10/shaking-hands-business-people-unsplash.jpg" className=" w-[70%] md:w-[50%] rounded-lg shadow-2xl" />
                         <div>
@@ -39,7 +39,7 @@ const HomeLayout = () => {
                                 allows you to showcase your skills and experience to potential employers, making you more visible in the job market. Furthermore, registration
                                 enables personalized job alerts, ensuring you never miss out on the latest openings tailored to your preferences. Join us today to supercharge your job search!
                             </p>
-                            <Link to='/register' className="btn bg-primary-blue text-primary-white hover:bg-primary-blue-hover">Get Started</Link>
+                            <Link to='/register' className="btn bg-primary-indigo text-primary-white hover:bg-primary-indigo-hover">Get Started</Link>
                         </div>
                     </div>
                 </div>
@@ -49,9 +49,9 @@ const HomeLayout = () => {
                     <div className="hero-content flex-col lg:flex-row">
                         <img src="https://www.marketing91.com/wp-content/uploads/2020/02/What-Is-Job-Sharing.jpg" className="w-[70%] md:w-[40%] rounded-lg shadow-2xl" />
                         <div>
-                            <h1 className="text-5xl font-bold text-primary-blue">Shere your jobs</h1>
+                            <h1 className="text-5xl font-bold text-primary-indigo">Shere your jobs</h1>
                             <p className="py-6 px-3 text-justify">Share your job on our website to reach a diverse and motivated talent pool. Posting your job is easy and effective, as our platform connects you with qualified candidates actively seeking opportunities. Maximize your recruitment efforts and find the perfect fit for your team by sharing your job on our website.</p>
-                            <Link to='/register' className="btn bg-primary-blue text-primary-white hover:bg-primary-blue-hover">Get Started</Link>
+                            <Link to='/register' className="btn bg-primary-indigo text-primary-white hover:bg-primary-indigo-hover">Get Started</Link>
                         </div>
                     </div>
                 </div>

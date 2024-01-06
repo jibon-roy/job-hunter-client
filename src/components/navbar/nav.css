@@ -1,6 +1,6 @@
 .active {
     background-color: transparent !important;
-    color: #007efe !important;
+    color: #b300ff !important;
     font-weight: bold;
 }
 
@@ -11,9 +11,15 @@ li {
 
 li a:hover {
     background-color: transparent !important;
+    color: #b300ff !important;
 }
 
 li a:focus {
+    background-color: transparent !important;
+    color: #b300ff !important;
+}
+
+li a:active {
     background-color: transparent !important;
 }
 
@@ -22,5 +28,5 @@ li a:focus {
 }
 
 .my-btn:hover {
-    border: 1px solid #007efe;
+    border: 1px solid #b300ff !important;
 }

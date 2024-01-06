@@ -33,7 +33,7 @@ const HandleBids = ({ data, serial }) => {
 
     return (
 
-        <tr className="hover  hover:text-primary-blue">
+        <tr className="hover  hover:text-primary-indigo">
             <th>{serial + 1}</th>
             <td>{data?.title}</td>
             <td>{data?.email}</td>
@@ -41,7 +41,7 @@ const HandleBids = ({ data, serial }) => {
             <td>{data?.deadline}</td>
             <td>{!data?.status ? isDisabled ? <p className="text-green font-medium">Done!</p> : <p className="text-green font-medium">Accept</p> : <p className="text-red font-medium">Pending</p>}</td>
             <td>
-                <button disabled={isDisabled} onClick={handleAccept} className={`${isDisabled ? 'bg-neutral-400 hover:bg-neutral-400' : ' hover:bg-primary-blue-hover bg-primary-blue'} px-2 py-1 text-primary-white rounded-md`}>Accept</button>
+                <button disabled={isDisabled} onClick={handleAccept} className={`${isDisabled ? 'bg-neutral-400 hover:bg-neutral-400' : ' hover:bg-primary-indigo-hover bg-primary-indigo'} px-2 py-1 text-primary-white rounded-md`}>Accept</button>
                 <button disabled={isDisabled} onClick={handleAccept} className={`${isDisabled ? 'bg-neutral-400 hover:bg-neutral-400' : ' hover:bg-red-hover bg-red'} px-2 py-1 ml-2 text-primary-white rounded-md`}>Reject</button>
             </td>
         </tr>

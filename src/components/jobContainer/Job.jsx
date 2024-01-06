@@ -6,14 +6,14 @@ const Job = ({ data }) => {
 
     return (
         <motion.div whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }} className=" bg-base-100 border-primary-blue  border rounded-md">
+            className=" bg-base-100 border-primary-indigo  border rounded-md">
             <div className="flex flex-col p-3">
                 <div className="flex gap-2 items-start">
                     <div>
                         <i className=" text-lg fa-regular fa-hand-point-right"></i>
                     </div>
                     <div>
-                        <h2 className="font-bold">Job Title: <span className="text-primary-blue">{data?.jobTitle}</span></h2>
+                        <h2 className="font-bold">Job Title: <span className="text-primary-indigo">{data?.jobTitle}</span></h2>
                     </div>
                 </div>
                 <div className="flex gap-2 items-center">
@@ -32,11 +32,11 @@ const Job = ({ data }) => {
                         <p className="font-semibold">Price range: {'$' + data?.minPrice + " - " + '$' + data?.maxPrice}</p>
                     </div>
                 </div>
-                <p>{data?.jobDescription.slice(0, 80) + '...Read more'}</p>
+                <p>{data?.jobDescription.slice(0, 80)}<Link className="text-primary-indigo" to={`/jobs/${data?._id}`}>...Read more</Link></p>
                 <div className="card-actions mt-4 justify-between items-center">
                     <div className="font-semibold">Category: <br /> {data?.category} </div>
                     <Link to={`/jobs/${data?._id}`}>
-                        <button className="rounded-none btn bg-primary-blue hover:bg-primary-blue-hover normal-case text-neutral-50">Bid Now</button></Link>
+                        <button className="rounded-none btn bg-primary-indigo hover:bg-primary-indigo-hover normal-case text-neutral-50">Bid Now</button></Link>
                 </div>
             </div>
         </motion.div>

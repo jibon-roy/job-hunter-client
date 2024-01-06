@@ -41,7 +41,7 @@ const AllJobs = () => {
                 </ul>
             </div>
             <div className='mx-auto my-20'>
-                <div className='text-center text-2xl md:text-4xl mb-5 font-semibold text-primary-blue'>
+                <div className='text-center text-2xl md:text-4xl mb-5 font-semibold text-primary-indigo'>
                     Browse All Jobs by Category
                 </div>
                 <div className='text-center mb-14 font-semibold'>

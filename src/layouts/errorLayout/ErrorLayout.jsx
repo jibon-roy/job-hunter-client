@@ -9,7 +9,7 @@ const ErrorLayout = () => {
             <Helmet>
                 <title>JH | 404 Error Page !</title>
             </Helmet>
-            <div className="flex h-[100vh] justify-center items-center w-full text-primary-blue">
+            <div className="flex h-[100vh] justify-center items-center w-full text-primary-indigo">
                 <div className='text-center'>
                     <Link to='/' className='mb-5'><PrimaryButton>Back to Home</PrimaryButton></Link>
                     <img src={errorPage} className='w-full' alt="" />

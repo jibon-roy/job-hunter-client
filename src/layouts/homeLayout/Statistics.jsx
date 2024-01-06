@@ -3,10 +3,10 @@ import Header from '../../components/Header/Header';
 
 const Statistics = () => {
     return (
-        <div>
+        <div className=' my-40'>
             <Header header={'Our Statics'} title={'Our incresing rate'}></Header>
-            <div className="stats flex shadow justify-center mb-40">
-                <div className="stat place-items-center">
+            <div className="stats flex rounded-none shadow justify-center">
+                <div className="stat my-10 place-items-center">
                     <div className="stat-title">Downloads</div>
                     <div className="stat-value">
                         <CountUp
@@ -24,7 +24,7 @@ const Statistics = () => {
                     <div className="stat-desc">From January 1st to February 1st</div>
                 </div>
 
-                <div className="stat place-items-center">
+                <div className="stat my-10 place-items-center">
                     <div className="stat-title">Users</div>
                     <div className="stat-value text-secondary">
                         <CountUp
@@ -42,7 +42,7 @@ const Statistics = () => {
                     <div className="stat-desc text-secondary">↗︎ 40 (2%)</div>
                 </div>
 
-                <div className="stat place-items-center">
+                <div className="stat my-10 place-items-center">
                     <div className="stat-title">New Registers</div>
                     <div className="stat-value">
                         <CountUp

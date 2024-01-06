@@ -51,7 +51,7 @@ const MyPostedJobs = () => {
                 </ul>
             </div>
             <div className="flex flex-col text-center w-full mb-12">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-primary-blue">My Posted Job</h1>
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-primary-indigo">My Posted Job</h1>
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Update and delete your posted job.</p>
             </div>
             {/* Update and delete my posted jobs */}

@@ -29,11 +29,11 @@ const Navbar = () => {
                 </div>
                 <p>{user?.displayName}</p>
             </div>
-            <li><Link><button onClick={logOut} className="btn bg-primary-blue hover:bg-primary-blue-hover text-base-100 normal-case">Log out</button></Link></li>
+            <li><Link><button onClick={logOut} className="btn bg-primary-indigo hover:bg-primary-indigo-hover text-base-100 normal-case">Log out</button></Link></li>
         </>
             : <>
                 <li><NavLink to='/login' >Login</NavLink></li>
-                <li><Link to='/register'><button className="btn bg-primary-blue hover:bg-primary-blue-hover text-base-100 normal-case">Register</button></Link></li>
+                <li><Link to='/register'><button className="btn bg-primary-indigo hover:bg-primary-indigo-hover text-base-100 normal-case">Register</button></Link></li>
             </>
         }
 
@@ -41,7 +41,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="drawer z-50 text-base bg-neutral-50">
+            <div className="drawer z-50 text-base ">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
                     {/* Navbar */}
@@ -64,7 +64,7 @@ const Navbar = () => {
                 <div className="drawer-side lg:hidden">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4 min-h-full bg-base-200">
-                        <li className="text-primary-white p-2 bg-primary-blue">Menu</li>
+                        <li className="text-primary-white p-2 bg-primary-indigo">Menu</li>
                         {navLinks}
                     </ul>
                 </div>

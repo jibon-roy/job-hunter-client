@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {},
     colors: {
-      'primary-blue': '#007efe',
-      'primary-blue-secondery': '#add6ff',
-      'primary-blue-hover': '#005ede',
-      'primary-dark-blue': '#034077',
+      'primary-indigo': '#b300ff',
+      'primary-indigo-secondery': '#f3d6ff',
+      'primary-indigo-hover': '#9e02e0',
+      'primary-dark-indigo': '#9e02d0',
       'primary-dark': '#233349',
       'primary-white': '#ffffff',
       'red': '#ea2323',

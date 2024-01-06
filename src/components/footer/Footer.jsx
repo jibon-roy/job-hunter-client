@@ -10,7 +10,7 @@ const Footer = () => {
                     <Logo></Logo>
                     <p>Job Hunter Company Ltd.<br />Providing reliable Jobs since 1992 </p>
                     <p> Contact Us- <br />
-                        Mail: <span className="text-primary-blue font-medium cursor-pointer">jobhunter@headoffice.com</span> <br />
+                        Mail: <span className="text-primary-indigo font-medium cursor-pointer">jobhunter@headoffice.com</span> <br />
                         88 Old Chapel Road, Gatesheath, UK
                     </p>
                 </aside>

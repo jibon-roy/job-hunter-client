@@ -3,7 +3,7 @@
 const Header = ({header, title}) => {
     return (
         <div>
-            <div className='text-center text-2xl md:text-4xl mb-5 font-semibold text-primary-blue'>
+            <div className='text-center text-2xl md:text-4xl mb-5 font-semibold text-primary-indigo'>
                 {header}
             </div>
             <div className='text-center mb-14 font-semibold'>

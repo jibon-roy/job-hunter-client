@@ -45,7 +45,7 @@ const MyBids = () => {
                 </ul>
             </div>
             <div className="flex flex-col text-center w-full mb-12">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-primary-blue">My Bids</h1>
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-primary-indigo">My Bids</h1>
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Your bid lists and status.</p>
             </div>
             <div className="max-lg:overflow-x-auto">
@@ -70,14 +70,14 @@ const MyBids = () => {
                                     : <tr><td>No bid data</td></tr>
                             }</tbody>
 
-                        {/* <tr className="hover  hover:text-primary-blue">
+                        {/* <tr className="hover  hover:text-primary-indigo">
                                 <th>1</th>
                                 <td>{bidData[0]?.title}</td>
                                 <td>{bidData[0]?.employee}</td>
                                 <td>$ {bidData[0]?.amount}</td>
                                 <td>{bidData[0]?.deadline}</td>
                                 <td>{bidData[0]?.status ? <p className="text-green font-medium">Complete</p> : <p className="text-red font-medium">Pending</p>}</td>
-                                <td><button className="px-2 py-1 hover:bg-primary-blue-hover bg-primary-blue text-primary-white rounded-md">Complete</button></td>
+                                <td><button className="px-2 py-1 hover:bg-primary-indigo-hover bg-primary-indigo text-primary-white rounded-md">Complete</button></td>
                             </tr> */}
                     </table>
                 </div>
