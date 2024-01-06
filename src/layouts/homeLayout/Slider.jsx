@@ -1,7 +1,6 @@
 import PrimaryButton from "../../components/button/PrimaryButton";
 import { PropTypes } from "prop-types";
 import { TypeAnimation } from 'react-type-animation';
-import logo from '/logo.png'
 import { Link } from "react-router-dom";
 
 
@@ -16,9 +15,8 @@ const Slider = ({ slider }) => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-2xl text-center">
                         <div className="flex justify-center">
-                            <div className='flex items-center bg-[#ffffff8f] rounded-lg shadow-[#ffffff8f]'>
-                                <img src={logo} className='w-[100px]' alt="" />
-                                <span className="mx-2 text-5xl inline font-bold text-primary-blue">Job Hunter</span>
+                            <div className='block w-full'>
+                                <span className="mx-2 text-7xl inline font-bold text-primary-white">Job Hunter</span>
                             </div>
                         </div>
                         <h1 className="mb-5 my-10 text-xl font-bold">

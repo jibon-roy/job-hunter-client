@@ -14,7 +14,7 @@ const TabLayout = () => {
     const { isLoading, data: jobs } = useQuery({
         queryKey: ['jobs'],
         queryFn: async () => {
-            const res = await axios.get('/jobs');
+            const res = await axios.get('https://job-hunter-server-dun.vercel.app/jobs');
             return res.data;
         }
     })

@@ -16,7 +16,7 @@ const Banner = () => {
     const [sliders, setSliders] = useState([])
 
     useEffect(() => {
-        axios('/sliders')
+        axios.get('https://job-hunter-server-dun.vercel.app/sliders')
             .then(res => setSliders(res.data))
             .catch(err => console.log(err))
     }, [])
