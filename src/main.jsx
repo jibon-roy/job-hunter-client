@@ -10,6 +10,17 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import Aos from 'aos'
+
+
+
+
+Aos.init({
+  once: false,
+  easing: 'ease-in-out',
+  anchorPlacement: 'top-bottom',
+  offset: 100
+});
 
 const queryClient = new QueryClient()
 

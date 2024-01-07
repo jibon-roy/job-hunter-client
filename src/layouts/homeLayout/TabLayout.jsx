@@ -38,7 +38,7 @@ const TabLayout = () => {
     return (
         <div className='mx-auto my-20'>
             <div className='text-center text-2xl md:text-4xl mb-5 font-semibold text-primary-indigo'>
-                Browse Jobs by Category
+                Job Market
             </div>
             <div className='text-center mb-14 font-semibold'>
                 Find the job you deserve.

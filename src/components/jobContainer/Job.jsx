@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const Job = ({ data }) => {
 
     return (
-        <motion.div whileHover={{ scale: 1.02 }}
+        <motion.div whileHover={{ scale: 1.02 }} data-aos="fade-zoom-in"
             className=" bg-base-100 border-primary-indigo  border rounded-md">
             <div className="flex flex-col p-3">
                 <div className="flex gap-2 items-start">
