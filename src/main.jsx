@@ -11,7 +11,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import Aos from 'aos'
-
+import 'aos/dist/aos.css';
 
 
 

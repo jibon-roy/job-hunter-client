@@ -31,8 +31,8 @@ const HomeLayout = () => {
             <section data-aos="fade-up" data-aos-duration='700'>
                 <div className="hero min-h-[70vh] text-primary-white bg-primary-indigo">
                     <div className="hero-content flex-col lg:flex-row-reverse">
-                        <img src="https://graduate.northeastern.edu/resources/wp-content/uploads/sites/4/2018/10/shaking-hands-business-people-unsplash.jpg" className=" w-[70%] md:w-[50%] rounded-lg shadow-2xl" />
-                        <div>
+                        <img data-aos="fade-left" data-aos-duration='1000' src="https://graduate.northeastern.edu/resources/wp-content/uploads/sites/4/2018/10/shaking-hands-business-people-unsplash.jpg" className=" w-[70%] md:w-[50%] rounded-lg shadow-2xl" />
+                        <div data-aos="fade-right" data-aos-duration='1000' >
                             <h1 className="text-5xl font-bold max-md:text-center">Get Start with us</h1>
                             <p className="py-6 px-3 text-justify max-md:text-center">
                                 Our job hunter website is your gateway to a world of career opportunities. By
@@ -41,7 +41,7 @@ const HomeLayout = () => {
                                 allows you to showcase your skills and experience to potential employers, making you more visible in the job market. Furthermore, registration
                                 enables personalized job alerts, ensuring you never miss out on the latest openings tailored to your preferences. Join us today to supercharge your job search!
                             </p>
-                            <Link to='/register' className="btn bg-primary-indigo text-primary-white hover:bg-primary-indigo-hover">Get Started</Link>
+                            <Link to='/register' className="btn bg-primary-indigo text-primary-white ml-2 hover:bg-primary-indigo-hover">Get Started</Link>
                         </div>
                     </div>
                 </div>
@@ -52,8 +52,8 @@ const HomeLayout = () => {
             <section data-aos="fade-up" data-aos-duration='700'>
                 <div className="hero min-h-[70vh] text-right max-md:text-center">
                     <div className="hero-content flex-col lg:flex-row">
-                        <img src="https://www.marketing91.com/wp-content/uploads/2020/02/What-Is-Job-Sharing.jpg" className="w-[70%] md:w-[40%] rounded-lg shadow-2xl" />
-                        <div>
+                        <img data-aos="fade-right" data-aos-duration='1000' src="https://www.marketing91.com/wp-content/uploads/2020/02/What-Is-Job-Sharing.jpg" className="w-[70%] md:w-[40%] rounded-lg shadow-2xl" />
+                        <div data-aos="fade-left" data-aos-duration='1000'>
                             <h1 className="text-5xl font-bold text-primary-indigo">Shere your jobs</h1>
                             <p className="py-6 px-3 text-justify">Share your job on our website to reach a diverse and motivated talent pool. Posting your job is easy and effective, as our platform connects you with qualified candidates actively seeking opportunities. Maximize your recruitment efforts and find the perfect fit for your team by sharing your job on our website.</p>
                             <Link to='/register' className="btn bg-primary-indigo text-primary-white hover:bg-primary-indigo-hover">Get Started</Link>
