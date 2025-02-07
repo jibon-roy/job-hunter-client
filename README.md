@@ -1,4 +1,5 @@
-# Welcome to Job Hunter project:
+# Job Hunter
+
 ## Project Feature:
 
 - User can register and login on this Job site.
