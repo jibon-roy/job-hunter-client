@@ -1,4 +1,4 @@
-# Project Job Hunter
+# Welcome to Job Hunter
 
 ## Project Feature:
 
