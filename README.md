@@ -1,6 +1,6 @@
 # Welcome to Job Hunter
 
-## Project Feature:
+## Project Features:
 
 - User can register and login on this Job site.
 - User can Add Jobs.
