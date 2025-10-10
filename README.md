@@ -9,3 +9,19 @@
 - User can Accept and reject job from bid request
 
 ## Project's Live Link: 🔗 https://job-hunter-site.web.app
+
+## Run this project:
+
+```bash
+
+git clone "project repo"
+
+cd job-hunter-client
+
+npm install
+
+npm run build
+
+npm run dev
+
+```
